@@ -41,7 +41,13 @@ def decomp(f) :
                 liste_termes.append("x")
 
             ##Opérateurs
-            elif f[i] == "+" or f[i] == "-" or f[i] == "*" :
+            #elif f[i] == "+" or f[i] == "-" or f[i] == "*" :
+
+            ##Suppression des espaces
+            elif f[i] == " " :
+                pass
+                
+            else :
                 liste_op.append(f[i])
 
     if not nombre == 0:
@@ -102,6 +108,9 @@ def calcul(liste_termes, liste_op, x) :
         #print("Liste des opérateurs :", liste_op,"\n")        
 
     return(resultat)
+
+def racines(f) :
+    print("Hello")
 
 def main(f, x) :
 
