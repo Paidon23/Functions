@@ -2,6 +2,7 @@ __author__ = 'sacha'
 
 
 from math import *
+import re
 
 def main():
 
@@ -64,7 +65,13 @@ def root(function, x1, x2):
     return x
 
 
-def derivee1(function):
+def derivee(function):
+    m=0
+
+def separate(function):
+    function=re.split('+*/-',function)
+    print(function)
+    
 
 
 
