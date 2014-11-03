@@ -55,13 +55,15 @@ while True:
         # screen.blit(buttons, (0, 0))
 ###################
 
-        if x <= 1020:
-            y = eval(function)
+    if x <= 1020:
+        y = eval(function)
 
 
-        pygame.draw.line(screen, (0, 0, 0), (x, 720 - y), ancien_coord, 1)
+    ## je dessine une ligne pour pas que ca fasse une courbe pointillee
+    ## (on peut pas diviser les pixels indefiniment)
+    pygame.draw.line(screen, (0, 0, 0), (x, 720 - y), ancien_coord, 1)
 
-        ancien_coord = (x, 720 - y)
-        x += 1
+    ancien_coord = (x, 720 - y)
+    x += 1
 
-        pygame.display.flip()
+    pygame.display.flip()

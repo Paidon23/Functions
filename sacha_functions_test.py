@@ -66,11 +66,21 @@ def root(function, x1, x2):
 
 
 def derivee(function):
-    m=0
+    ## ceci est juste pour remplir l'espace blanc
+    ok=ok
+    ## voila
 
 def separate(function):
-    function=re.split('+*/-',function)
-    print(function)
+    num = []
+    ope = []
+    t = 0
+    for i in range(len(function)):
+        if function[i] in ('+', '-', '*', '/'):
+            num.append(function[t:i])
+            ope.append(function[i])
+            t = i + 1
+    num.append(function[t:])
+    print(num, "\n", ope)
     
 
 
