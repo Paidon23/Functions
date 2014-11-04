@@ -70,6 +70,11 @@ def derivee(function):
     ok=ok
     ## voila
 
+    ## ce qui suit ne fonctionnera pas! c'est juste une ebauche
+    function = separate(function)
+    for i in range(len(function)):
+        
+
 def separate(function):
     num = []
     ope = []
